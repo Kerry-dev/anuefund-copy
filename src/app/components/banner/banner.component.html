@@ -1,1 +1,32 @@
-<div class="banner"></div>
+<div class="banner">
+  <div class="section">
+    <div class="carousel">
+      <ngb-carousel
+        #carousel
+        [interval]="5000"
+        [pauseOnHover]="pauseOnHover"
+        [pauseOnFocus]="pauseOnFocus"
+        (slide)="onSlide($event)"
+      >
+        @for (img of bannerData; track img; let i = $index) {
+          <ng-template ngbSlide>
+            <a [href]="img.href" target="_blank" rel="nofollow noopener noreferrer">
+              <div class="picsum-img-wrapper">
+                <img [src]="img.imgSrc" alt="" />
+              </div>
+            </a>
+          </ng-template>
+        }
+      </ngb-carousel>
+    </div>
+    <div class="chart">
+      <div class="header">MSCI 世界 ESG 領導指數</div>
+      <div class="content">
+        @if (chartOptions !== null) {
+          <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" height="300"> </highcharts-chart>
+        }
+        <p>資料來源：Bloomberg；資料截至 2024/05/22。</p>
+      </div>
+    </div>
+  </div>
+</div>
