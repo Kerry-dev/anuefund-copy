@@ -1,0 +1,31 @@
+<div class="blog-content">
+  <app-section-title [title]="blog.title"></app-section-title>
+  <div class="banner">
+    @if (blog.imgHeight) {
+      <img [src]="blog.imgSrc" [style.height.px]="blog.imgHeight" alt="" />
+    } @else {
+      <img [src]="blog.imgSrc" alt="" />
+    }
+  </div>
+  <div class="article-list">
+    @for (item of blog.articleList; track item; let i = $index) {
+      @if (i < 5) {
+        <div class="article-item">
+          <div class="text-title">
+            @if (item.isHot) {
+              <strong>[熱門]</strong>
+            }
+            {{ item.title }}
+          </div>
+          <div class="text-date">{{ item.date | dateTime: 'yyyy/MM/DD' }}</div>
+        </div>
+      }
+    }
+
+    <div class="article-item --more">
+      @if (blog.articleList.length > 5) {
+        <div class="text-more">更多文章...</div>
+      }
+    </div>
+  </div>
+</div>

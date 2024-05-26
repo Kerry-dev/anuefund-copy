@@ -1,0 +1,9 @@
+<div class="blog">
+  <div class="section">
+    <div class="block">
+      @for (item of data; track item) {
+        <app-blog-content class="content" [blog]="item"></app-blog-content>
+      }
+    </div>
+  </div>
+</div>

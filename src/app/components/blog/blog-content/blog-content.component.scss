@@ -1,0 +1,50 @@
+@import '../../../styles/colors';
+.blog-content {
+  .banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 550px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .article-list {
+    .article-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+      height: 40px;
+      cursor: pointer;
+      &.--more {
+        flex-direction: row-reverse;
+        border-bottom: none;
+      }
+      .text-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 80%;
+        padding-right: 10px;
+        &:hover {
+          color: $brown;
+        }
+        strong {
+          color: $scarlet !important;
+        }
+      }
+      .text-date {
+        color: $dark-grey;
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .text-more {
+        color: $scarlet;
+        font-weight: bolder;
+      }
+    }
+  }
+}
