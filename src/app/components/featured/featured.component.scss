@@ -1,0 +1,50 @@
+@import '../../styles/colors';
+.featured {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  .section {
+    max-width: 1240px;
+    padding: 40px 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    select {
+      width: 50%;
+      height: 35px;
+    }
+    .tab-content {
+      margin-top: 0 !important;
+    }
+  }
+  p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 10px 0;
+  }
+  .pagination {
+    justify-content: center;
+    margin-top: 35px;
+    a {
+      color: $black;
+      float: left;
+      padding: 5px 8px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      &.active {
+        background: $dark-grey;
+        color: $white;
+      }
+    }
+  }
+  @media (max-width: 960px) {
+    .section {
+      padding: 30px 2%;
+    }
+  }
+  @media (max-width: 640px) {
+    .section {
+    }
+  }
+}
