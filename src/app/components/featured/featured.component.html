@@ -1,0 +1,32 @@
+<div class="featured">
+  <div class="section">
+    <app-section-title [title]="'愛地球精選'"></app-section-title>
+    <select (change)="onSelectClick($event)">
+      @for (item of data; track item) {
+        <option [value]="item.id">{{ item.title }}</option>
+      }
+    </select>
+    <app-featured-table [data]="data[activeId].data" [rankName]="data[activeId].rankName"></app-featured-table>
+    <p>資料來源: Lipper &amp; 投信投顧公會 &amp; 台灣集中保管結算所。績效為截至前一日台幣累積報酬。</p>
+    <p>
+      各系列基金之淨值是由Lipper(資訊源)所提供，淨值可能因系統更新作業與實際狀況有所差異，相關淨值僅供參考，各系列基金之申購/贖回/轉換淨值仍應以台灣集中保管結算所資料為準，歡迎您至集保網站查詢(<a
+        href="http://www.tdcc.com.tw"
+        target="_blank"
+        >www.tdcc.com.tw</a
+      >)。
+    </p>
+    <p>
+      欲查詢符合金管會規範的ESG基金，請至基金資訊觀測站(<a
+        href="https://announce.fundclear.com.tw/MOPSFundWeb/ESG.jsp"
+        target="_blank"
+        style="color: blue"
+        >ESG基金專區</a
+      >)
+    </p>
+    <ul class="pagination">
+      <li><a>上一頁</a></li>
+      <li><a class="active">1</a></li>
+      <li><a>下一頁</a></li>
+    </ul>
+  </div>
+</div>

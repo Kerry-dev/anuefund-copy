@@ -1,0 +1,178 @@
+<div class="featured-table">
+  <table class="table table-md">
+    <thead>
+      <tr>
+        <th class="cel-title">基金名稱</th>
+        <th class="cel-date">淨值日期</th>
+        <th class="cel-worth">最新淨值</th>
+        <th
+          class="cel-rank cursor-pointer"
+          [class.is-active]="orderBy === 'rank'"
+          [class.is-desc]="isDesc"
+          (click)="onSortClick('rank')"
+        >
+          <span>{{ rankName }}</span>
+        </th>
+        <th
+          class="cel-month6 cursor-pointer"
+          [class.is-active]="orderBy === 'month6'"
+          [class.is-desc]="isDesc"
+          (click)="onSortClick('month6')"
+        >
+          六個月
+        </th>
+        <th
+          class="cel-year1 cursor-pointer"
+          [class.is-active]="orderBy === 'year1'"
+          [class.is-desc]="isDesc"
+          (click)="onSortClick('year1')"
+        >
+          一年
+        </th>
+        <th
+          class="cel-year2 cursor-pointer"
+          [class.is-active]="orderBy === 'year2'"
+          [class.is-desc]="isDesc"
+          (click)="onSortClick('year2')"
+        >
+          兩年
+        </th>
+        <th
+          class="cel-year3 cursor-pointer"
+          [class.is-active]="orderBy === 'year3'"
+          [class.is-desc]="isDesc"
+          (click)="onSortClick('year3')"
+        >
+          三年
+        </th>
+        <th class="cel-buy">單筆</th>
+        <th class="cel-schedule">定投</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="listChange$ | async as list">
+        @for (item of list; track item) {
+          <tr>
+            <td class="cel-title">{{ item.title }}</td>
+            <td class="cel-date">{{ item.date | dateTime: 'yyyy-MM-DD' }}</td>
+            <td class="cel-wortd">{{ item.worth | number: '1.4-4' }}</td>
+            <td class="cel-rank">{{ item.rank | number: '1.1-1' }}</td>
+            <td class="cel-montd6" [class.is-red]="item.month6 > 0" [class.is-green]="item.month6 < 0">
+              {{ item.month6 | percent: '1.2-2' }}
+            </td>
+            <td
+              class="cel-year1"
+              [class.is-null]="item.year1 === null"
+              [class.is-red]="item.year1 !== null && item.year1 > 0"
+              [class.is-green]="item.year1 !== null && item.year1 < 0"
+            >
+              {{ item.year1 | percent: '1.2-2' }}
+            </td>
+            <td
+              class="cel-year2"
+              [class.is-null]="item.year2 === null"
+              [class.is-red]="item.year2 !== null && item.year2 > 0"
+              [class.is-green]="item.year2 !== null && item.year2 < 0"
+            >
+              {{ item.year2 | percent: '1.2-2' }}
+            </td>
+            <td
+              class="cel-year3"
+              [class.is-null]="item.year3 === null"
+              [class.is-red]="item.year3 !== null && item.year3 > 0"
+              [class.is-green]="item.year3 !== null && item.year3 < 0"
+            >
+              {{ item.year3 | percent: '1.2-2' }}
+            </td>
+            <td class="cel-buy">
+              <button><i-bs name="cart4" width="20" height="20"> </i-bs></button>
+            </td>
+            <td class="cel-schedule">
+              <button><i-bs name="calendar3" width="20" height="20"> </i-bs></button>
+            </td>
+          </tr>
+        }
+      </ng-container>
+    </tbody>
+  </table>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th class="cel-title">基金名稱</th>
+        <th class="cel-overall-rating">{{ rankName }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="listChange$ | async as list">
+        @for (item of list; track item; let i = $index) {
+          <tr>
+            <td colspan="2">
+              <table class="sub-table">
+                <tr class="row-header">
+                  <td class="row-key">{{ item.title }}</td>
+                  <td class="row-value">{{ item.rank }}</td>
+                  <td class="row-more">
+                    <button class="btn-open" [class.is-active]="visibleToggleList[i]" (click)="onTobbleClick(i)">
+                      <i-bs name="caret-down-fill" width="16" height="16"> </i-bs>
+                    </button>
+                  </td>
+                </tr>
+                @if (visibleToggleList[i]) {
+                  <tr>
+                    <td class="row-key">六個月</td>
+                    <td
+                      class="row-value"
+                      colspan="2"
+                      [class.is-red]="item.month6 > 0"
+                      [class.is-green]="item.month6 < 0"
+                    >
+                      {{ item.month6 | percent: '1.2-2' }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="row-key">一年</td>
+                    <td
+                      class="row-value"
+                      colspan="2"
+                      [class.is-null]="item.year1 === null"
+                      [class.is-red]="item.year1 !== null && item.year1 > 0"
+                      [class.is-green]="item.year1 !== null && item.year1 < 0"
+                    >
+                      {{ item.year1 | percent: '1.2-2' }}
+                    </td>
+                    <td class="row-more"></td>
+                  </tr>
+                  <tr>
+                    <td class="row-key">兩年</td>
+                    <td
+                      class="row-value"
+                      colspan="2"
+                      [class.is-null]="item.year2 === null"
+                      [class.is-red]="item.year2 !== null && item.year2 > 0"
+                      [class.is-green]="item.year2 !== null && item.year2 < 0"
+                    >
+                      {{ item.year2 | percent: '1.2-2' }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="row-key">三年</td>
+                    <td
+                      class="row-value"
+                      colspan="2"
+                      [class.is-null]="item.year3 === null"
+                      [class.is-red]="item.year3 !== null && item.year3 > 0"
+                      [class.is-green]="item.year3 !== null && item.year3 < 0"
+                    >
+                      {{ item.year3 | percent: '1.2-2' }}
+                    </td>
+                    <td class="row-more"></td>
+                  </tr>
+                }
+              </table>
+            </td>
+          </tr>
+        }
+      </ng-container>
+    </tbody>
+  </table>
+</div>
