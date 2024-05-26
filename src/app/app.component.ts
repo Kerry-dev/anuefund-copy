@@ -6,6 +6,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { LipperComponent } from './components/lipper/lipper.component';
 import { CombinationComponent } from './components/combination/combination.component';
 import { FeaturedComponent } from './components/featured/featured.component';
+import { PartnerComponent } from './components/partner/partner.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { FeaturedComponent } from './components/featured/featured.component';
     LipperComponent,
     CombinationComponent,
     FeaturedComponent,
+    PartnerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
