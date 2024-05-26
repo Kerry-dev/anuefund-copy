@@ -1,0 +1,130 @@
+<div class="footer">
+  <div class="title">
+    警 語
+    <button class="btn-open" [class.is-active]="isActive" (click)="onTobbleClick()">
+      <i-bs name="caret-down-fill" width="16" height="16"> </i-bs>
+    </button>
+  </div>
+  <div class="content">
+    <div class="block-warnig" [class.is-active]="isActive">
+      <div class="text-warnig">
+        <p>
+          依金融消費者保護法最新相關規定，為提供投資人更好的投資服務，本公司施行「投資屬性評估」程序，您於鉅亨買基金網站完成「投資風險適合度」評估，本公司將依客戶屬性做商品適合度規範並至少每年請您更新一次，若未能完成屬性評估屆時將會影響您的交易。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          外幣計價之基金，投資人須承擔取得收益分配或買回價金時轉換回新臺幣可能產生之匯率風險。若轉換當時之新臺幣兌換外幣匯率相較於原始投資日之匯率升值時，投資人將承受匯兌損失。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          各基金所採用之「公平價格調整」（或「反稀釋」）、短線交易及「價格調整機制（或「擺動定價」）」等機制，相關說明請詳各基金公開說明書。投資人應遵守基金公開說明書所列相關交易規定與限制。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          各基金經金管會核准或同意生效，惟不表示絕無風險。基金經理公司以往之經理績效不保證基金之最低投資收益；基金經理公司除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱投資人須知／基金公開說明書。投資人申購前應自行了解判斷。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          有關基金應負擔之費用（含分銷費用）已揭露於基金公開說明書及投資人須知，投資人可至
+          <a target="_blank" href="https://mops.twse.com.tw/mops/web/index">公開資訊觀測站</a>
+          或
+          <a target="_blank" href="https://www.fundclear.com.tw/">基金資訊觀測站</a>
+          中查詢。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p class="text-gold">
+          由於非投資等級債券基金之信用評等未達投資等級或未經信用評等，且對利率變動的敏感度甚高，故非投資等級債券基金可能會因利率上升、市場流動性下降，或債券發行機構違約不支付本金、利息或破產而蒙受虧損。非投資等級債券基金不適合無法承擔相關風險之投資人，投資人投資以非投資等級債券基金為訴求之基金不宜占其投資組合過高之比重。部份基金或所投資之債券子基金，可能投資美國Rule
+          144A債券，該等債券屬私募性質，較可能發生流動性不足，財務訊息揭露不完整或因價格不透明導致波動性較大之風險，投資人須留意相關風險。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。</p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          部分基金配息前未先扣除應負擔之相關費用。基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。各基金由本金支付配息之相關資料，投資人可至各投信基金公司及總代理人網站查詢。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          本基金涉及投資新興市場部份，因其波動性與風險程度可能較高，且其政治與經濟情勢穩定度可能低於已開發國家，也可能使資產價值受不同程度之影響。依金管會規定：
+        </p>
+        <div class="sub-block">
+          <div class="text-warnig">
+            <p>
+              投信基金直接投資大陸地區有價證券僅限掛牌上市有價證券，投資人須留意中國市場特定政治、經濟與市場等投資風險。
+            </p>
+          </div>
+          <div class="text-warnig">
+            <p>
+              境外基金直接投資大陸地區證券市場之有價證券以掛牌上市有價證券及銀行間債券市場為限，且投資總金額不得超過本基金淨資產價值之百分之二十。但若該年度獲得境外基金深耕計畫認可者不在此限，比例得放寬至百分之四十。另投資人亦須留意中國市場特定政治、外匯、經濟與市場等投資風險。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-warnig">
+        <p>本文提及之經濟走勢預測不必然代表基金之績效，基金投資風險請詳閱基金公開說明書。</p>
+      </div>
+      <div class="text-warnig">
+        <p>投資人因不同時間進場，將有不同之投資績效，過去之績效亦不代表未來績效之保證。</p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          投資人應注意貨幣基金投資之風險包括利率風險、債券交易市場流動性不足之風險及投資無擔保公司債之風險；本基金或有因利率變動、債券交易市場流動性不足及定期存單提前解約而影響基金淨值下跌之風險，同時或有受益人大量贖回時，至延遲給付贖回價款之可能。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          風險報酬等級係依基金類型、投資區域或主要投資標的／產業，由低至高，區分為RR1~RR5五個風險報酬等級。RR係計算過去五年基金淨值波動度標準差，以標準差區間予以分類等級，基金成立未滿五年，將以較短區間或適當參考標的作為評估標準。此等級分類係基於一般市場狀況反映市場價格波動風險，無法涵蓋所有風險(如：基金計價幣別匯率風險、投資標的產業風險、信用風險、利率風險、流動性風險等)，亦不宜作為投資唯一依據，投資人應充分評估基金之投資風險。基金主要相關投資風險（如信用風險、流動性風險…等）已揭露於基金公開說明書或投資人須知。其他相關資料(如年化標準差、Alpha、Beta及Sharp值等)可至中華民國投信投顧公會網站「
+          <a href="https://www.sitca.org.tw/index_pc.aspx" target="_blank">基金績效及評估指標查詢專區</a>」查詢。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          上述資料來源僅供投資人參考，惟相關資訊仍應以各基金公司公告為準。如有任何疏漏錯誤，本公司或關係企業與其任何董事或任何受僱人恕不負任何法律責任。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>有關基金之 ESG 資訊，投資人應於申購前詳閱基金公開說明書或投資人須知所載之基金所有特色或目標等資訊。</p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          投資人申購基金係持有基金受益憑證，而非本文提及之投資資產或標的;投資人應留意衍生性工具/證券相關商品等槓桿投資策略所可能產生之投資風險(詳見公開說明書或投資人須知)。
+        </p>
+      </div>
+      <div class="text-warnig">
+        <p>
+          本網站最佳瀏覽體驗建議使用Google Chrome、Edge、Safari，相關詳情請參閱「<a
+            target="_blank"
+            href="https://w1.anuefund.com/customer/problem/%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97?item=1"
+            >瀏覽器建議設定</a
+          >」。
+        </p>
+      </div>
+    </div>
+    <div class="info">
+      <div class="block-info"></div>
+      <p>
+        鉅亨證券投資顧問股份有限公司 │ 客服信箱：<a href="mailto:cs@anuegroup.com.tw?Subject=鉅亨投顧客服信箱">{{
+          'cs@anuegroup.com.tw'
+        }}</a>
+        │ 113金管投顧新字第003號
+      </p>
+      <p>公司地址：台北市信義區松仁路89號18樓B室 │ 服務專線：(02)2720-8126 │ 服務時間：09:00-17:00</p>
+      <p>
+        <span class="textGold"> 鉅亨投顧獨立經營管理</span> │ 版權為鉅亨投顧所有
+        <a href="/site-map" target="_blank">網站導覽</a> │
+        <a href="https://www.anuegroup.com.tw/" target="_blank">鉅亨集團</a> │
+        <a href="mailto:CS@anuegroup.com.tw?subject=鉅亨投顧客服信箱" target="_blank">聯絡我們</a> │
+        <a href="https://w1.anuefund.com/detail/638/21" target="_blank">隱私權說明</a> │
+        <a href="https://www.foi.org.tw/" target="_blank">金融消費評議中心</a> │
+        <a href="https://www.amlo.moj.gov.tw/" target="_blank">行政院洗錢防制辦公室</a>
+      </p>
+    </div>
+  </div>
+</div>

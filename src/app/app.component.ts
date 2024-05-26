@@ -7,6 +7,7 @@ import { LipperComponent } from './components/lipper/lipper.component';
 import { CombinationComponent } from './components/combination/combination.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { PartnerComponent } from './components/partner/partner.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { PartnerComponent } from './components/partner/partner.component';
     CombinationComponent,
     FeaturedComponent,
     PartnerComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
