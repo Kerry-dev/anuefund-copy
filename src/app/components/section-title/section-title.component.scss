@@ -1,0 +1,27 @@
+@import '../../styles/colors';
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  h2 {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: ' ';
+      height: 15px;
+      width: 15px;
+      background: $scarlet;
+      margin-right: 5px;
+    }
+    span {
+      color: $scarlet;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

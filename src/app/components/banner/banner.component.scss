@@ -2,10 +2,12 @@
 .banner {
   margin-top: 115px;
   padding: 40px 20px 60px 20px;
-
+  display: flex;
+  justify-content: center;
   background: linear-gradient(to bottom, $white 0%, rgba(239, 239, 238, 1) 100%);
   .section {
-    max-width: 1240px;
+    width: 1240px;
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +19,7 @@
       width: 420px;
       height: 300px;
       .header {
-        background: $dark-grey;
+        background: $deep-dark-grey;
         color: $white;
         padding: 6px;
         text-align: center;
@@ -25,7 +27,7 @@
       }
       .content {
         padding: 10px 5px;
-        border: 1px solid $dark-grey;
+        border: 1px solid $deep-dark-grey;
 
         highcharts-chart {
           width: 100%;
