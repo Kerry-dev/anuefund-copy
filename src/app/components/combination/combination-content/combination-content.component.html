@@ -1,0 +1,26 @@
+<div class="combination-content">
+  <app-section-title [title]="'永續投資王'"> </app-section-title>
+  <div class="menu">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="activeId">
+      @for (item of combination.data; track item) {
+        <li [ngbNavItem]="item.id" [class.active]="activeId === item.id">
+          <button ngbNavLink>{{ item.tabName }}</button>
+          <ng-template ngbNavContent>
+            <div class="block">
+              <img [src]="item.imgSrc" alt="" />
+              <p>{{ item.imgMemo }}</p>
+              <strong>{{ item.title }}</strong>
+              <p class="text-content">{{ item.content }}</p>
+              <div class="operation">
+                @if (combination.hasButton) {
+                  <button>0手續費立即申購</button>
+                }
+              </div>
+            </div>
+          </ng-template>
+        </li>
+      }
+    </ul>
+  </div>
+  <div [ngbNavOutlet]="nav"></div>
+</div>
