@@ -41,6 +41,7 @@
     .cel-title {
       text-align: left;
       width: 30%;
+      min-width: 80px;
     }
     > tbody {
       > tr {
@@ -128,7 +129,28 @@
             td {
               padding-left: 0;
               padding-right: 0;
-              padding-bottom: 20px;
+              padding-bottom: 0;
+              &.cel-buy {
+                padding-bottom: 12px;
+
+                button {
+                  margin-left: 8px;
+                  border: 1px solid $red;
+                  border-radius: 5px;
+                  background-color: $red !important;
+                  color: white;
+                  font-size: 14px;
+                  font-weight: bold;
+                  letter-spacing: 3px;
+                  width: 65px;
+                  height: 27px;
+                  float: right;
+                  i-bs {
+                    background-color: $red !important;
+                    margin-right: 4px;
+                  }
+                }
+              }
             }
             .row-key {
               &:hover {

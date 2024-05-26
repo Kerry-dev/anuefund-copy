@@ -1,0 +1,80 @@
+@import '../../styles/colors';
+.footer {
+  width: 100vw;
+  background-color: $dark-grey;
+  .title {
+    text-align: center;
+    overflow: hidden;
+    font-size: 24px;
+    color: $white;
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    font-weight: bold;
+    .btn-open {
+      background-color: $white;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      transition: all 0.3s ease-in-out;
+      i-bs {
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      &.is-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .content {
+    padding: 12px 0;
+    .block-warnig {
+      padding: 0 10px 12px 10px;
+      width: auto;
+      margin: 0 auto;
+
+      text-align: justify;
+      overflow: hidden;
+      display: none;
+      max-width: 1000px;
+      &.is-active {
+        display: block;
+      }
+      .text-warnig {
+      }
+    }
+    .info {
+      max-width: 1000px;
+      margin: 0 auto;
+
+      padding: 10px;
+      padding-top: 0px;
+      .block-info {
+        max-width: 970px;
+        padding-left: 13px;
+      }
+    }
+    p {
+      margin-bottom: 5px;
+      line-height: 1.64em;
+      color: $white;
+      font-size: 15px;
+      font-weight: bold;
+      padding-left: 15px;
+      word-break: break-all;
+      &.text-gold {
+        color: $gold;
+      }
+    }
+    a {
+      color: $blue;
+      outline: none;
+      text-decoration: none;
+    }
+    .sub-block {
+      padding: 0 10px;
+    }
+  }
+}
