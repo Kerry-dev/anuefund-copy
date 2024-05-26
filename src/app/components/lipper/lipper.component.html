@@ -1,0 +1,27 @@
+<div class="lipper">
+  <div class="section">
+    <app-section-title [title]="'Lipper ESG評分榜'" [subTitle]="'  [ESG評分是什麼?]'"></app-section-title>
+    <div class="menu">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="activeId">
+        @for (item of data; track item) {
+          <li [ngbNavItem]="item.id" [class.active]="activeId === item.id">
+            <button ngbNavLink>{{ item.title }}</button>
+            <ng-template ngbNavContent>
+              <app-lipper-table [data]="item.data" [rankName]="item.rankName"></app-lipper-table>
+              <p>資料來源: Lipper &amp; 投信投顧公會 &amp; 台灣集中保管結算所。績效為截至前一日台幣累積報酬。</p>
+              <p>
+                各系列基金之淨值是由Lipper(資訊源)所提供，淨值可能因系統更新作業與實際狀況有所差異，相關淨值僅供參考，各系列基金之申購/贖回/轉換淨值仍應以台灣集中保管結算所資料為準，歡迎您至集保網站查詢(<a
+                  href="http://www.tdcc.com.tw"
+                  target="_blank"
+                  >www.tdcc.com.tw</a
+                >)。
+              </p>
+              <p>本評分榜係以累積型基金之美元計價為代表</p>
+            </ng-template>
+          </li>
+        }
+      </ul>
+    </div>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </div>
+</div>

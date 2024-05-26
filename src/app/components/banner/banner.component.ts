@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Banner } from '../../types/Banner';
 import { mockBanner, mockHighChart } from './mockData';
-import { CommonModule } from '@angular/common';
 import { ShareModule } from '../../modules/share.module';
 import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { HighchartsChartModule } from 'highcharts-angular';
@@ -12,7 +11,7 @@ import Highcharts from 'highcharts';
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [CommonModule, ShareModule, NgbCarouselModule, HighchartsChartModule],
+  imports: [ShareModule, NgbCarouselModule, HighchartsChartModule],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
 })
